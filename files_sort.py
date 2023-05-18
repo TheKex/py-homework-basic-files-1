@@ -6,9 +6,7 @@ if __name__ == '__main__':
     for file_name in files:
         with open(os.path.join('src', 'files', file_name), encoding="utf-8") as file:
             files_metadata[file_name] = len(file.readlines())
-    pprint(files_metadata)
     files.sort(key=lambda x: files_metadata[x])
-    print(files)
 
     with open(os.path.join('src', 'files', 'result.txt'), 'w', encoding="utf-8") as res_file:
         for file in files:
