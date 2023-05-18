@@ -1,5 +1,4 @@
 import os
-from pprint import pprint
 if __name__ == '__main__':
     files = ['1.txt', '2.txt', '3.txt']
     files_metadata = {}
@@ -13,6 +12,4 @@ if __name__ == '__main__':
             res_file.write(file + '\n' + str(files_metadata[file]) + '\n')
             with open(os.path.join('src', 'files', file), encoding="utf-8") as read_file:
                 res_file.writelines(read_file.readlines() + ['\n'])
-
-
 
